@@ -5,22 +5,15 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li>
-            <% if user_signed_in? == false %>
-                <%= link_to 'Login', new_user_session_path, class: 'nav-link'%>
-            <% end %>
-        </li>
-        <li>
-            <% if user_signed_in? == false %>
-                <%= link_to 'Sign Up', new_user_registration_path, class: 'nav-link'%>
-            <% end %>
-        </li>
-        <li>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <% if user_signed_in? %>
-                <%= button_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'%>
+                Logged as: <strong><%= current_user.email %></strong>
+                <li><%= link_to "Edit profile", edit_user_registration_path, :class => 'navbar-link' %></li>
+                <li><%= button_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'%></li>
+            <% else %>
+                <li><%= link_to 'Login', new_user_session_path, class: 'nav-link ml-3'%></li>
+                <li><%= link_to 'Sign Up', new_user_registration_path, class: 'nav-link'%></li>
             <% end %>
-        </li>
       </ul>
     </div>
   </div>
