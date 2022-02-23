@@ -2,8 +2,10 @@
 
 <div>
     <% @posts.each do |post| %>
-    <h2><%= post.body %></h2>
-    <p><%= post.author %></p>
+        <h2><%= post.body %></h2>
+        <% if user_signed_in? %>
+            <p><%= post.author %></p>
+        <% end %>
     <% end %>
 </div>
 
