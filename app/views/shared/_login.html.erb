@@ -1,8 +1,0 @@
-<p class="navbar-text float-right">
-  <% if user_signed_in? %>
-    Logged as: <strong><%= current_user.email %></strong>
-    <%= link_to "Edit profile", edit_user_registration_path, :class => 'navbar-link' %>
-  <% end %>
-    
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>

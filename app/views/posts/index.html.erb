@@ -1,13 +1,6 @@
 <h1>Index</h1>
 
-<div>
-    <% @posts.each do |post| %>
-        <h2><%= post.body %></h2>
-        <% if user_signed_in? %>
-            <p><%= post.author %></p>
-        <% end %>
-    <% end %>
-</div>
+<%= render partial: 'shared/posts'%>
 
 <%= link_to 'New Post', new_post_path%>
 
