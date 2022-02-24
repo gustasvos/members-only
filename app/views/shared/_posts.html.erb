@@ -6,11 +6,13 @@
   </div>
 </div>
     <% @posts.each do |post| %>
-        <div class="card mb-3" style="width: 18rem;">
-        <% if user_signed_in? %>
-            <h6 class="card-subtitle mb-2 text-muted"><%= post.author %></h6>
-        <% end %>
-        <p class="card-text"><%= post.body %></p>
+        <div class="card mb-3 mx-auto" style="width: 18rem;">
+            <div class="card-body">
+                <% if user_signed_in? %>
+                    <h6 class="card-subtitle mb-2 text-muted"><%= post.author %></h6>
+                <% end %>
+            <p class="card-text"><%= post.body %></p>
+            </div>
         </div>
     <% end %>
 </div>
