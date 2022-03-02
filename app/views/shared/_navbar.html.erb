@@ -8,7 +8,7 @@
       <% if user_signed_in? %>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
           <%= link_to "Edit profile", edit_user_registration_path, :class => 'navbar-link d-inline p-2' %>
-          <%= button_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link d-inline p-2'%>
+          <%= button_to "Logout", destroy_user_session_path, method: :delete, :class => 'btn btn-primary d-inline p-2'%>
       <% else %>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
           <span class="navbar-text">
