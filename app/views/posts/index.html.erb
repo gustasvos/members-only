@@ -10,8 +10,8 @@
                 <% end %>
                 <p class="card-text"><%= post.body %></p>
                 <% if user_signed_in? && current_user.email == post.author %>
-                    <%= button_to 'edit', edit_post_path(post), :class => "btn btn-primary btn-sm" %>
-                    <%= button_to 'delete', post_path(post), method: :delete, data: { confirm: "Are you sure?"}, :class => "btn btn-danger btn-sm" %>
+                        <%= link_to 'edit', edit_post_path(post), :class => "btn btn-primary btn-sm" %>
+                        <%= button_to 'delete', post_path(post), method: :delete, data: { confirm: "Are you sure?"}, :class => "btn btn-danger btn-sm mt-2" %>
                 <% end %>
             </div>
         </div>
