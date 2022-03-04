@@ -1,7 +1,7 @@
 <%= form_with model: @post do |form|%>
-    <div class="col-md-3 mb-3">
-        <%= form.label :body, :class => "form-label" %>
+    <div class="col-md-3 mb-3 mx-auto">
+        <%= form.label "Write your post", :class => "form-label" %>
         <%= form.text_field :body, :class => "form-control"%> 
-        <%= form.submit "Submit post", :class => "btn btn-primary"%>
+        <%= form.submit "Submit post", :class => "btn btn-primary mt-2"%>
     </div>
 <% end %>
