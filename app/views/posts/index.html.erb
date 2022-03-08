@@ -1,7 +1,9 @@
 </div>
-    <h1>Posts</h1>
-    <%#= button_to 'New Post', new_post_path, :class => "btn btn-primary btn-sm"%>
-    <%= link_to 'New Post', new_post_path, :class => "btn btn-primary btn-sm" %>
+    <div style="text-align: center">
+        <h1>Posts</h1>
+        <%#= button_to 'New Post', new_post_path, :class => "btn btn-primary btn-sm"%>
+        <%= link_to 'New Post', new_post_path, :class => "btn btn-primary btn-sm mb-2" %>
+    </div>
     <% @posts.each do |post| %>
         <div class="card mb-3 mx-auto" style="width: 35rem;">
             <div class="card-body">
